@@ -4,6 +4,8 @@
       <string>currentBuild</string>
       <path-set>
         <pathsSet class="linked-hash-set">
+          <string>WEB-INF/web.xml</string>
+          <string>META-INF/MANIFEST.MF</string>
           <string>WEB-INF/lib/aplikasi-cuti-ui-springmvc-1.0-SNAPSHOT.jar</string>
           <string>WEB-INF/lib/aplikasi-cuti-domain-1.0-SNAPSHOT.jar</string>
           <string>WEB-INF/lib/spring-orm-3.0.5.RELEASE.jar</string>
