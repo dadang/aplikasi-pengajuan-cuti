@@ -44,6 +44,6 @@ public interface AppService {
 	
 	public List<EntryCutiReal> findAllEntryCutiReal();
 	
-	public EntryCutiReal findPengajuanCutiRealById(String id);
+	public List<PengajuanCuti> findPengajuanCutiApproved();
 	
 }
