@@ -1,5 +1,16 @@
-#maven project (STS)
+#Eclipse
 .settings
 .project
 .classpath
+.metadata
 target
+bin
+Servers
+
+#SpringSource Tool Suite
+.springBeans
+
+#NetBeans
+build
+dist
+private
