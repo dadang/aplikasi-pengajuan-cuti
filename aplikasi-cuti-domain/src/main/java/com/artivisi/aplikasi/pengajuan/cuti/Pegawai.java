@@ -10,7 +10,6 @@ import org.hibernate.annotations.GenericGenerator;
 
 @Entity
 @Table (name="m_pegawai")
-
 public class Pegawai {
 	@Id @GeneratedValue(generator="system-uuid")
 	@GenericGenerator(name="system-uuid",strategy="uuid")
