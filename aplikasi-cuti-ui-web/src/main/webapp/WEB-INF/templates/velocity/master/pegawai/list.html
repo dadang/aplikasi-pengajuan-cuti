@@ -1,7 +1,11 @@
 <html>
 <body>
-	<a href="form">tambah</a><br>
 	<h2>Daftar Pegawai</h2>
+	<br>
+	<a href="form">tambah</a><br>
+	#if(!$listPegawai || $listPegawai.isEmpety())
+		<font color="red">Data Tidak Ada !!!</font>
+	#else
 <table border=1 width=40%>	
 	<tr>
 		<th>Kode</th>
@@ -10,11 +14,14 @@
 		<th>Action</th>
 	</tr>
 	<tr>
-		<td>001</td>
-		<td>Deni</td>
-		<td>OB</td>
-		<td align=center><a href="">edit</a>|<a href="">delete</a></td>
+		#foreach($p in $listPegawai)
+			<td>$!p.kode</td>
+			<td>$!p.nama</td>
+			<td>$!p.jabatan</td>
+			<td align=center><a href="form?id=$!p.id">edit</a>&nbsp;|&nbsp;<a href="delete?id=$!p.id">delete</a></td>
+		#end
 	</tr>
 </table>
+#end
 </body>
 </html>

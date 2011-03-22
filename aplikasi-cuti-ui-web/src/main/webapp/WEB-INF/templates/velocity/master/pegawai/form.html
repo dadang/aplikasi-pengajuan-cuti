@@ -1,20 +1,31 @@
 <html>
 <body>
 <h2>Tambah Pegawai</h2>
+	#if(!$pegawai)
+		ID Pegawai Tidak Valid
+	#else
+<form method="post" action="">
 <table>
 	<tr>
 		<td>Kode Pegawai</td>
-		<td><input type="text" name="kode"></td>
+		<td><input type="text" name="kode" value="$!pegawai.kode"></td>
+		<td><font color="red">#springBind("pegawai.kode") #springShowErrors("<br>" "")</font></td>
 	</tr>
 	<tr>
 		<td>Nama Pegawai</td>
-		<td><input type="text" name="nama"></td>
+		<td><input type="text" name="nama" value="$!pegawai.nama"></td>
+		<td><font color="red">#springBind("pegawai.nama") #springShowErrors("<br>" "")</font></td>
 	</tr>
 	<tr>
 		<td>Jabatan</td>
-		<td><input type="text" name="jabatan"></td>
+		<td><input type="text" name="jabatan" value="$!pegawai.jabatan"></td>
+		<td><font color="red">#springBind("pegawai.jabatan") #springShowErrors("<br>" "")</font></td>
 	</tr>
+	
 </table><br>
 <input type="submit" value="simpan">&nbsp;&nbsp;&nbsp;&nbsp;<input type="reset" value="batal">
+</form>
+
+#end
 </body>
 </html>

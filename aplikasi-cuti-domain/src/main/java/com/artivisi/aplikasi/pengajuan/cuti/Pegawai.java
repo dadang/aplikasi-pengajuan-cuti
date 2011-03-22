@@ -7,6 +7,9 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.validator.constraints.NotEmpty;
+
+import com.sun.istack.NotNull;
 
 @Entity
 @Table (name="m_pegawai")
@@ -15,12 +18,15 @@ public class Pegawai {
 	@GenericGenerator(name="system-uuid",strategy="uuid")
 	private String id;
 	
+	@NotNull @NotEmpty
 	@Column (name="kode", unique=true)
 	private String kode;
 	
+	@NotNull @NotEmpty
 	@Column (name="nama")
 	private String nama;
 
+	@NotNull @NotEmpty
 	@Column (name="jabatan")
 	private String jabatan;
 
