@@ -15,7 +15,7 @@ import com.artivisi.aplikasi.pengajuan.cuti.service.AppService;
 
 @Controller
 public class PegawaiController {
-	@Autowired AppService appservice;
+	@Autowired private AppService appservice;
 	
 	
 	@RequestMapping("master/pegawai/list")

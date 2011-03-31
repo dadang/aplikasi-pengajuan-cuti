@@ -1,4 +1,17 @@
 <html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script type="text/javascript">
+        jQuery(function(){
+            // datepicker
+            var pickerOpts = {
+                dateFormat: "yy-mm-dd",
+                appendText: " yyyy-mm-dd"
+            };
+            jQuery('input[name=tanggal]').datepicker(pickerOpts);
+        });
+    </script>
+</head>
 <body>
 	<h2>Tambah Hari Libur</h2>
 <table>

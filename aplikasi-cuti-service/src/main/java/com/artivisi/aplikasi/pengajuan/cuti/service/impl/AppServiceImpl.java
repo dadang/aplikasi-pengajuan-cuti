@@ -15,7 +15,7 @@ import com.artivisi.aplikasi.pengajuan.cuti.service.AppService;
 
 @Service("appService")
 public class AppServiceImpl implements AppService {
-	@Autowired SessionFactory sessionFactory;
+	@Autowired private SessionFactory sessionFactory;
 	
 	@Override
 	public void savePegawai(Pegawai p) {
