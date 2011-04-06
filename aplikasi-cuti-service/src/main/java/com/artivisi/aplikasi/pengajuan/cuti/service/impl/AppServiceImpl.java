@@ -5,6 +5,7 @@ import java.util.List;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.artivisi.aplikasi.pengajuan.cuti.EntryCutiReal;
 import com.artivisi.aplikasi.pengajuan.cuti.MasterHariLibur;
@@ -13,6 +14,7 @@ import com.artivisi.aplikasi.pengajuan.cuti.Pegawai;
 import com.artivisi.aplikasi.pengajuan.cuti.PengajuanCuti;
 import com.artivisi.aplikasi.pengajuan.cuti.service.AppService;
 
+@Transactional
 @Service("appService")
 public class AppServiceImpl implements AppService {
 	@Autowired private SessionFactory sessionFactory;
