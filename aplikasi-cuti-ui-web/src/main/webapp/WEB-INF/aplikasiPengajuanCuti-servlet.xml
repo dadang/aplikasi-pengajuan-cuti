@@ -15,12 +15,18 @@
 	
 	<mvc:annotation-driven />
 	
-	<bean
-		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-		<property name="prefix" value="/WEB-INF/templates/velocity/" />
-		<property name="suffix" value=".html" />
-		<property name="order" value="1" />
-		</bean>
+	<bean id="velocityConfig" class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">
+        <property name="resourceLoaderPath" value="/WEB-INF/templates/velocity/" />
+    </bean>
+	
+	<bean id="velocityViewResolver"
+		class="org.springframework.web.servlet.view.velocity.VelocityViewResolver">
+        <property name="order" value="1" />
+        <property name="prefix" value="" />
+        <property name="suffix" value=".html" />
+        <property name="dateToolAttribute" value="dateTool" />
+        <property name="numberToolAttribute" value="numberTool" />
+    </bean>
 
 
 </beans>
