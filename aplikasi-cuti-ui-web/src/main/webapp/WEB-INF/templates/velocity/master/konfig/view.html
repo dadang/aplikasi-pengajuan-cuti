@@ -1,28 +1,33 @@
 <html>
 <body>
-	<h2>View Konfig</h2>
+	<h2>Edit Master Konfig</h2>
 	<br>
+	<a href="form?id=$!konfig.id">Edit</a><br>
+	#if(!$konfig)
+		ID Master Konfig Tidak Valid
+	#else
 <table border="1" cellpadding="1" cellspacing="6">
 <tr>
 	<td>cuti pertahun (hari kerja)</td>
-	<td>$!k.cuti pertahun (hari kerja)</td>
+	<td>$!konfig.cutiPertahun (hari kerja)</td>
 </tr>
 <tr>
 	<td>hangus pertanggal (di tahun berikutnya)</td>
-	<td>$!k.hangus pertanggal (di tahun berikutnya)</td>
+	<td>$!konfig.hangusPertanggal (di tahun berikutnya)</td>
 </tr>
 <tr>
 	<td>maks. cuti (hari kerja)</td>
-	<td>$!k.maks. cuti (hari kerja)</td>
+	<td>$!konfig.maksCuti (hari kerja)</td>
 </tr>
 <tr>
 	<td>cuti selanjutnya setelah (hari kerja)</td>
-	<td>$!k.cuti selanjutnya setelah (hari kerja)</td>
+	<td>$!konfig.cutiSelanjutnyaSetelah (hari kerja)</td>
 </tr>
 <tr>
 	<td>min. pengajuan sebelum (hari kerja)</td>
-	<td>$!k.min. pengajuan sebelum (hari kerja)</td>
+	<td>$!konfig.minPengajuanSebelum (hari kerja)</td>
 </tr>
 </table>
+#end
 </body>
 </html>

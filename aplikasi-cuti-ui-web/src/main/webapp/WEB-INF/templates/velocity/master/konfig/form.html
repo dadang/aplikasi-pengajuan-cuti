@@ -1,33 +1,44 @@
 <html>
 <body>
 	<h2>Master Konfig</h2>
+	#if(!$masterKonfig)
+		ID Master Konfig Tidak Valid
+	#else
+<form method="post" action="">
 <table>
 <tr>
 	<td>cuti pertahun</td>
-	<td><input type="text" name="cuti pertahun"></td>
+	<td><input type="text" name="cutiPertahun" value="$!masterKonfig.cutiPertahun"></td>
+	<td><font color="red">#springBind("masterKonfig.cutiPertahun") #springShowErrors("<br>" "")</font></td>
 	<td>hari kerja</td>
 </tr>
 <tr>
 	<td>hangus pertanggal</td>
-	<td><input type="text" name="hangus pertanggal"></td>
+	<td><input type="text" name="hangusPertanggal" value="$!masterKonfig.hangusPertanggal"></td>
+	<td><font color="red">#springBind("masterKonfig.hangusPertanggal") #springShowErrors("<br>" "")</font></td>
 	<td>tahun berikutnya</td>
 </tr>
 <tr>
 	<td>maks cuti</td>
-	<td><input type="text" name="maks cuti"></td>
+	<td><input type="text" name="maksCuti" value="$!masterKonfig.maksCuti"></td>
+	<td><font color="red">#springBind("masterKonfig.maksCuti") #springShowErrors("<br>" "")</font></td>
 	<td>hari kerja</td>
 </tr>
 <tr>
 	<td>cuti selanjutnya setelah</td>
-	<td><input type="text" name="cuti selanjutnya setelah"></td>
+	<td><input type="text" name="cutiSelanjutnyaSetelah" value="$!masterKonfig.cutiSelanjutnyaSetelah"></td>
+	<td><font color="red">#springBind("masterKonfig.cutiSelanjutnyaSetelah") #springShowErrors("<br>" "")</font></td>
 	<td>hari kerja</td>
 </tr>
 <tr>
 	<td>min pengajuan sebelum</td>
-	<td><input type="text" name="min pengajuan sebelum"></td>
+	<td><input type="text" name="minPengajuanSebelum" value="$!masterKonfig.minPengajuanSebelum"></td>
+	<td><font color="red">#springBind("masterKonfig.minPengajuanSebelum") #springShowErrors("<br>" "")</font></td>
 	<td>hari kerja</td>
 </tr>
 </table><br>
 <input type="submit" value="ok">
+</form>
+#end
 </body>
 </html>

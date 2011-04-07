@@ -24,6 +24,8 @@ public interface AppService {
 	
 	public MasterKonfig findMasterKonfigById(String id);
 	
+	public MasterKonfig getKonfig();
+	
 	public void saveMasterHariLibur(MasterHariLibur mhl);
 	
 	public void deleteMasterHariLibur(MasterHariLibur mhl);

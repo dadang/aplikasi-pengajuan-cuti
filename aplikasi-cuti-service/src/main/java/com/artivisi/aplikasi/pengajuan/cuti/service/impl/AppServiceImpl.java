@@ -146,4 +146,12 @@ public class AppServiceImpl implements AppService {
 		
 	}
 
+	@Override
+	public MasterKonfig getKonfig() {
+		return (MasterKonfig) sessionFactory.getCurrentSession()
+		.createQuery("From MasterKonfig mk")
+		.setMaxResults(1)
+		.uniqueResult();
+	}
+
 }
